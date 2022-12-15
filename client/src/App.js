@@ -9,33 +9,33 @@ import PageNotFound from './component/PageNotFound/PageNotFound.jsx';
 import './App.css';
 import './Normalize.css';
 import axios from 'axios';
-axios.defaults.baseURL = 'https://deploy-production-bbc8.up.railway.app/';
+axios.defaults.baseURL = 'https://dogs-deploy-production.up.railway.app/';
 
 function App() {
-    return (
-        <>
-            <Switch>
-                <Route exact path="/">
-                    <LandingPage />
-                </Route>
-                <Route exact path="/home">
-                    <Nav />
-                    <Home />
-                </Route>
-                <Route exact path="/home/:id">
-                    <Nav />
-                    <Detail />
-                </Route>
-                <Route exact path="/newbreed">
-                    <Nav />
-                    <Form />
-                </Route>
-                <Route path="/*">
-                    <PageNotFound />
-                </Route>
-            </Switch>
-        </>
-    );
+	return (
+		<>
+			<Switch>
+				<Route exact path='/'>
+					<LandingPage />
+				</Route>
+				<Route exact path='/home'>
+					<Nav />
+					<Home />
+				</Route>
+				<Route exact path='/home/:id'>
+					<Nav />
+					<Detail />
+				</Route>
+				<Route exact path='/newbreed'>
+					<Nav />
+					<Form />
+				</Route>
+				<Route path='/*'>
+					<PageNotFound />
+				</Route>
+			</Switch>
+		</>
+	);
 }
 
 export default App;
